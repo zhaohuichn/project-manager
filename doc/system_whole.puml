@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+
+actor 项目经理
+node 项目管理平台
+
+interface 输入源协议接口
+interface 输入源接口
+
+component 文件读取管理
+component 文件输出管理
+component 文件输出管理
+
+component 文件输出
+
+
+项目经理 --> 项目管理平台
+项目管理平台 --* 文件读取管理
+项目管理平台 --* 文件输出管理
+
+
+
+
+
+
+
+@enduml
