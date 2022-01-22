@@ -7,7 +7,7 @@ import java.net.URL;
  *
  * @author ZHAOHUI
  */
-public class ExcelSource extends AbstractReadWriteSource{
+public abstract class ExcelSource extends AbstractReadWriteSource{
 
     private String abstractPath;
 
