@@ -22,7 +22,7 @@ public class ExcelSheetData implements Serializable {
      * key-列索引
      * value-列数据
      */
-    private Map<Integer, String> cellValueMap;
+    private Map<Integer, Map<Integer, String>> cellValueMap;
 
     public Map<Integer, String> getCellNameMap() {
         return cellNameMap;
@@ -32,11 +32,11 @@ public class ExcelSheetData implements Serializable {
         this.cellNameMap = cellNameMap;
     }
 
-    public Map<Integer, String> getCellValueMap() {
+    public Map<Integer, Map<Integer, String>> getCellValueMap() {
         return cellValueMap;
     }
 
-    public void setCellValueMap(Map<Integer, String> cellValueMap) {
+    public void setCellValueMap(Map<Integer, Map<Integer, String>> cellValueMap) {
         this.cellValueMap = cellValueMap;
     }
 }
