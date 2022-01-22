@@ -1,5 +1,7 @@
 package com.project.manager.parse.sheet;
 
+import com.project.manager.entity.dto.ExcelSheetData;
+
 /**
  * ExcelCellParser
  *
@@ -7,8 +9,6 @@ package com.project.manager.parse.sheet;
  */
 public interface ExcelSheetParser<T> {
 
-    String id();
-
-    T parse(Object rawData);
+    T parse(ExcelSheetData rawData);
 
 }

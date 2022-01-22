@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author ZHAOHUI
  */
-public class InputExcelSource extends AbstractInputSource {
+public class InputExcelSheet extends AbstractInputSource {
 
     private int rowNo;
     /**
@@ -44,7 +44,7 @@ public class InputExcelSource extends AbstractInputSource {
 
     private List<String> notes;
 
-    public InputExcelSource(String abstractPath) {
+    public InputExcelSheet(String abstractPath) {
         super(abstractPath);
     }
 

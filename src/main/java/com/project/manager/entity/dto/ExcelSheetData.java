@@ -10,6 +10,7 @@ import java.util.Map;
  */
 public class ExcelSheetData implements Serializable {
 
+    private String url;
 
     /**
      * 列名键值对
@@ -38,5 +39,13 @@ public class ExcelSheetData implements Serializable {
 
     public void setCellValueMap(Map<Integer, Map<Integer, String>> cellValueMap) {
         this.cellValueMap = cellValueMap;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
     }
 }
