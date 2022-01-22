@@ -1,21 +1,23 @@
-package com.project.manager.parse.out;
+package com.project.manager.parse.cell.out;
 
 import com.project.manager.enums.OutExcelCellTypeEnum;
 import org.springframework.util.ObjectUtils;
 
 /**
- * RequirementName
+ * RowNoParser
  *
  * @author ZHAOHUI
  */
-public class RequirementNameParser extends AbstractOutputExcelCellParser<String>{
+public class ModuleParser extends AbstractOutputExcelCellParser<String> {
+
     @Override
     public String id() {
-        return OutExcelCellTypeEnum.REQUIREMENT.toString();
+        return OutExcelCellTypeEnum.MODULE.toString();
     }
 
     @Override
     public String parse(Object rawData) {
         return ObjectUtils.isEmpty(rawData) ? "" : rawData.toString();
     }
+
 }

@@ -1,16 +1,16 @@
-package com.project.manager.parse.in;
+package com.project.manager.parse.cell.in;
 
 import com.project.manager.enums.InputExcelCellTypeEnum;
 
 /**
- * ProblemParser
+ * MemberScheduleParser
  *
  * @author ZHAOHUI
  */
-public class ProblemParser extends AbstractInputExcelCellParser<String>{
+public class MemberParser extends AbstractInputExcelCellParser<String>{
     @Override
     public String id() {
-        return InputExcelCellTypeEnum.PROBLEM.toString();
+        return InputExcelCellTypeEnum.MEMBER.toString();
     }
 
     @Override

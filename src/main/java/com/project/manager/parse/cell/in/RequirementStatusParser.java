@@ -1,4 +1,4 @@
-package com.project.manager.parse.in;
+package com.project.manager.parse.cell.in;
 
 import com.project.manager.enums.InputExcelCellTypeEnum;
 import org.springframework.util.ObjectUtils;
@@ -8,10 +8,10 @@ import org.springframework.util.ObjectUtils;
  *
  * @author ZHAOHUI
  */
-public class RequirementScheduleParser extends AbstractInputExcelCellParser<String> {
+public class RequirementStatusParser extends AbstractInputExcelCellParser<String> {
     @Override
     public String id() {
-        return InputExcelCellTypeEnum.REQUIREMENT_SCHEDULE.toString();
+        return InputExcelCellTypeEnum.REQUIREMENT_STATUS.toString();
     }
 
     @Override

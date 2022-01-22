@@ -1,4 +1,4 @@
-package com.project.manager.parse.out;
+package com.project.manager.parse.cell.out;
 
 import com.project.manager.enums.OutExcelCellTypeEnum;
 import org.springframework.util.ObjectUtils;
@@ -8,10 +8,10 @@ import org.springframework.util.ObjectUtils;
  *
  * @author ZHAOHUI
  */
-public class DocumentUrlParser extends AbstractOutputExcelCellParser<String>{
+public class RequirementNameParser extends AbstractOutputExcelCellParser<String>{
     @Override
     public String id() {
-        return OutExcelCellTypeEnum.DOCUMENT_URL.toString();
+        return OutExcelCellTypeEnum.REQUIREMENT.toString();
     }
 
     @Override

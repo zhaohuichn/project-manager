@@ -1,4 +1,4 @@
-package com.project.manager.parse.out;
+package com.project.manager.parse.cell.out;
 
 import com.project.manager.parse.ExcelCellParser;
 

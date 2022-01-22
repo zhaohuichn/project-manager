@@ -1,4 +1,4 @@
-package com.project.manager.parse.out;
+package com.project.manager.parse.cell.out;
 
 import com.project.manager.enums.OutExcelCellTypeEnum;
 import org.springframework.util.ObjectUtils;
@@ -8,11 +8,11 @@ import org.springframework.util.ObjectUtils;
  *
  * @author ZHAOHUI
  */
-public class MemberParser extends AbstractOutputExcelCellParser<String> {
+public class TodoTypeParser extends AbstractOutputExcelCellParser<String> {
 
     @Override
     public String id() {
-        return OutExcelCellTypeEnum.MEMBER.toString();
+        return OutExcelCellTypeEnum.TODO_TYPE.toString();
     }
 
     @Override

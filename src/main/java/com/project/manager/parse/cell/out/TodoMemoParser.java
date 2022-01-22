@@ -1,6 +1,6 @@
-package com.project.manager.parse.in;
+package com.project.manager.parse.cell.out;
 
-import com.project.manager.enums.InputExcelCellTypeEnum;
+import com.project.manager.enums.OutExcelCellTypeEnum;
 import org.springframework.util.ObjectUtils;
 
 /**
@@ -8,10 +8,10 @@ import org.springframework.util.ObjectUtils;
  *
  * @author ZHAOHUI
  */
-public class DocumentUrlParser extends AbstractInputExcelCellParser<String> {
+public class TodoMemoParser extends AbstractOutputExcelCellParser<String> {
     @Override
     public String id() {
-        return InputExcelCellTypeEnum.DOCUMENT_URL.toString();
+        return OutExcelCellTypeEnum.TODO_MEMO.toString();
     }
 
     @Override

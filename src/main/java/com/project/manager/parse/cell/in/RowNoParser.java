@@ -1,23 +1,21 @@
-package com.project.manager.parse.out;
+package com.project.manager.parse.cell.in;
 
-import com.project.manager.enums.OutExcelCellTypeEnum;
+import com.project.manager.enums.InputExcelCellTypeEnum;
 import org.springframework.util.ObjectUtils;
 
 /**
- * RowNoParser
+ * TodoMemoParser
  *
  * @author ZHAOHUI
  */
-public class ModuleParser extends AbstractOutputExcelCellParser<String> {
-
+public class RowNoParser extends AbstractInputExcelCellParser<String> {
     @Override
     public String id() {
-        return OutExcelCellTypeEnum.MODULE.toString();
+        return InputExcelCellTypeEnum.ROW_NO.toString();
     }
 
     @Override
     public String parse(Object rawData) {
         return ObjectUtils.isEmpty(rawData) ? "" : rawData.toString();
     }
-
 }

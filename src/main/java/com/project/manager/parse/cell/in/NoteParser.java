@@ -1,4 +1,4 @@
-package com.project.manager.parse.in;
+package com.project.manager.parse.cell.in;
 
 import com.project.manager.enums.InputExcelCellTypeEnum;
 import org.springframework.util.ObjectUtils;
@@ -8,10 +8,10 @@ import org.springframework.util.ObjectUtils;
  *
  * @author ZHAOHUI
  */
-public class MemberTotalParser extends AbstractInputExcelCellParser<String> {
+public class NoteParser extends AbstractInputExcelCellParser<String> {
     @Override
     public String id() {
-        return InputExcelCellTypeEnum.MEMBER_TOTAL.toString();
+        return InputExcelCellTypeEnum.NOTE.toString();
     }
 
     @Override
