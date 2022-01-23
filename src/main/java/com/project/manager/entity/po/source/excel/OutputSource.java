@@ -1,4 +1,6 @@
-package com.project.manager.entity.po.source;
+package com.project.manager.entity.po.source.excel;
+
+import com.project.manager.entity.po.source.Source;
 
 /**
  * InputSource

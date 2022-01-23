@@ -1,6 +1,8 @@
 package com.project.manager.entity.po.source;
 
-import java.net.MalformedURLException;
+import com.project.manager.entity.po.source.excel.InputSource;
+import com.project.manager.entity.po.source.excel.OutputSource;
+
 import java.net.URL;
 
 /**
@@ -10,18 +12,25 @@ import java.net.URL;
  */
 public abstract class AbstractReadWriteSource implements InputSource, OutputSource {
 
-    protected String abstractPath;
+    private final InputSource inputSource;
 
-    public AbstractReadWriteSource(String abstractPath) {
-        this.abstractPath = abstractPath;
+    private final OutputSource outputSource;
+
+    public AbstractReadWriteSource(InputSource is, OutputSource os) {
+        this.inputSource = is;
+        this.outputSource = os;
     }
 
     @Override
     public URL url() {
-        try {
-            return new URL(this.abstractPath);
-        } catch (MalformedURLException e) {
-            return null;
-        }
+        return this.inputSource.url();
+    }
+
+    public URL getInputUrl() {
+        return inputSource.url();
+    }
+
+    public URL getOutputUrl() {
+        return outputSource.url();
     }
 }

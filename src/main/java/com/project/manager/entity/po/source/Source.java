@@ -1,7 +1,5 @@
 package com.project.manager.entity.po.source;
 
-import javax.sound.midi.Patch;
-import java.io.InputStream;
 import java.net.URL;
 
 /**
@@ -14,6 +12,5 @@ public interface Source {
     String abstractPath();
 
     URL url();
-
 
 }

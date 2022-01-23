@@ -1,4 +1,4 @@
-package com.project.manager.entity.po.source;
+package com.project.manager.entity.po;
 
 /**
  * 需求人员

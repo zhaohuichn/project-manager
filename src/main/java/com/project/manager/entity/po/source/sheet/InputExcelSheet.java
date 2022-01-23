@@ -1,4 +1,6 @@
-package com.project.manager.entity.po.source;
+package com.project.manager.entity.po.source.sheet;
+
+import com.project.manager.entity.po.source.excel.AbstractInputSource;
 
 import java.net.URL;
 import java.util.List;
@@ -46,11 +48,6 @@ public class InputExcelSheet extends AbstractInputSource {
 
     public InputExcelSheet(String abstractPath) {
         super(abstractPath);
-    }
-
-    @Override
-    public byte[] read() {
-        return new byte[0];
     }
 
     @Override

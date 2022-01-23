@@ -1,23 +1,18 @@
-package com.project.manager.entity.po.source;
+package com.project.manager.entity.po.source.excel;
 
-import java.net.URL;
+import com.project.manager.entity.po.source.AbstractReadWriteSource;
 
 /**
  * ExcelSource
  *
  * @author ZHAOHUI
  */
-public abstract class ExcelSource extends AbstractReadWriteSource{
+public abstract class ExcelSource extends AbstractReadWriteSource {
 
     private String abstractPath;
 
     public ExcelSource(String abstractPath) {
         super(abstractPath);
-    }
-
-    @Override
-    public byte[] read() {
-        return new byte[0];
     }
 
     @Override
