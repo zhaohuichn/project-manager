@@ -7,6 +7,6 @@ package com.project.manager.enums;
  */
 public enum SourceTypeEnum {
 
-    EXCEL, TXT
+    EXCEL, SHEET, TXT
 
 }

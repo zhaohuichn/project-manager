@@ -1,6 +1,7 @@
-package com.project.manager.entity.po.source.sheet;
+package com.project.manager.entity.source.sheet;
 
-import com.project.manager.entity.po.source.excel.AbstractInputSource;
+import com.project.manager.entity.source.AbstractInputSource;
+import com.project.manager.enums.SourceTypeEnum;
 
 import java.net.URL;
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.List;
  *
  * @author ZHAOHUI
  */
-public class InputExcelSheet extends AbstractInputSource {
+public class StandOutputExcelSheet extends AbstractInputSource {
 
     private int rowNo;
     /**
@@ -46,8 +47,13 @@ public class InputExcelSheet extends AbstractInputSource {
 
     private List<String> notes;
 
-    public InputExcelSheet(String abstractPath) {
+    public StandOutputExcelSheet(String abstractPath) {
         super(abstractPath);
+    }
+
+    @Override
+    public SourceTypeEnum type() {
+        return SourceTypeEnum.SHEET;
     }
 
     @Override

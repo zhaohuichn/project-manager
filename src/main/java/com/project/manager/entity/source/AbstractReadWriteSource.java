@@ -1,7 +1,4 @@
-package com.project.manager.entity.po.source;
-
-import com.project.manager.entity.po.source.excel.InputSource;
-import com.project.manager.entity.po.source.excel.OutputSource;
+package com.project.manager.entity.source;
 
 import java.net.URL;
 

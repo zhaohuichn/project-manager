@@ -1,4 +1,4 @@
-package com.project.manager.entity.po.source.excel;
+package com.project.manager.entity.source;
 
 import java.net.MalformedURLException;
 import java.net.URL;
