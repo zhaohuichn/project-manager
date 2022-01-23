@@ -1,7 +1,7 @@
 package com.project.manager.parse;
 
 import com.google.common.collect.Maps;
-import com.project.manager.parse.cell.ExcelCellParser;
+import com.project.manager.parse.excel.sheet.cell.ExcelCellParser;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;

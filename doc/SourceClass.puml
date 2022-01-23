@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Source
+
+interface Excel
+interface Sheet
+
+class StandExcel
+class StandSheet
+
+Source <|-- Excel
+Source <|-- Sheet
+Excel <|-- StandExcel
+Sheet <|-- StandSheet
+
+
+
+@enduml
