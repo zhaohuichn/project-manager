@@ -1,5 +1,6 @@
 package com.project.manager.entity.source.excel;
 
+import com.google.common.collect.Lists;
 import com.project.manager.entity.source.AbstractSource;
 import com.project.manager.entity.source.excel.sheet.ExcelSheet;
 import com.project.manager.enums.SourceTypeEnum;
@@ -14,17 +15,31 @@ import java.util.List;
  *
  * @author ZHAOHUI
  */
-public class StandExcel extends AbstractSource implements ExcelSheet {
+public class StandExcel extends AbstractSource implements Excel {
 
     private List<ExcelSheet> sheets;
 
-    public StandExcel(String abstractPath) {
+    public StandExcel() {
+        this.sheets = Lists.newArrayList();
+    }
 
+    public StandExcel(String path) {
+        super(path);
+        sheets = Lists.newArrayList();
+    }
+
+    @Override
+    public List<ExcelSheet> getSheets() {
+        return sheets;
+    }
+
+    public void setSheets(List<ExcelSheet> sheets) {
+        this.sheets = sheets;
     }
 
     @Override
     public SourceTypeEnum type() {
-        return null;
+        return SourceTypeEnum.EXCEL;
     }
 
     @Override

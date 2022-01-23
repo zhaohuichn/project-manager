@@ -7,5 +7,8 @@ import com.project.manager.entity.source.Source;
  *
  * @author ZHAOHUI
  */
-public interface Row extends Source {
+public interface ExcelRow extends Source {
+
+    boolean isHeader();
+
 }

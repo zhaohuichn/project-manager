@@ -7,7 +7,7 @@ import com.project.manager.entity.source.descriptor.Descriptor;
  *
  * @author ZHAOHUI
  */
-public class StandardExcelSheetRowCell implements ExcelSheetRowCell {
+public class StandardExcelCell implements ExcelCell {
 
     private String id;
 

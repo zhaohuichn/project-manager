@@ -5,6 +5,6 @@ package com.project.manager.entity.source.excel.cell;
  *
  * @author ZHAOHUI
  */
-public interface ExcelSheetRowCell {
+public interface ExcelCell {
 
 }

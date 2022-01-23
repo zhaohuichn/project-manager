@@ -5,5 +5,5 @@ package com.project.manager.parse.excel;
  *
  * @author ZHAOHUI
  */
-public class StandExcelParser {
+public class StandardExcelParser extends AbstractExcelParser {
 }

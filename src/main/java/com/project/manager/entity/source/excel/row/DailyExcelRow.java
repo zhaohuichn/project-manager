@@ -1,11 +1,11 @@
 package com.project.manager.entity.source.excel.row;
 
 /**
- * StandardRow
+ * DailyExcelRow
  *
  * @author ZHAOHUI
  */
-public class StandardRow extends AbstractExcelRow {
+public class DailyExcelRow extends StandardRow {
 
 
 }
