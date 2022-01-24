@@ -11,11 +11,11 @@ import java.util.concurrent.Callable;
  *
  * @author ZHAOHUI
  */
-public class ExcelCellParseTask implements Callable<Excel> {
+public class ExcelParseTask implements Callable<Excel> {
 
     private URL url;
 
-    public ExcelCellParseTask(URL url) {
+    public ExcelParseTask(URL url) {
         this.url = url;
     }
 

@@ -1,10 +1,12 @@
 package com.project.manager;
 
+import com.project.manager.pool.ExcelParseTask;
 import com.project.manager.source.excel.Excel;
-import com.project.manager.pool.ExcelCellParseTask;
 
 import java.io.File;
-import java.util.concurrent.FutureTask;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * DemoRun
@@ -13,12 +15,14 @@ import java.util.concurrent.FutureTask;
  */
 public class Demo {
 
+    private static final ExecutorService POOL = Executors.newSingleThreadExecutor();
+
     public static void main(String[] args) throws Exception {
-        ExcelCellParseTask task = new ExcelCellParseTask(new File("C:\\Users\\wps\\workspace\\doc\\project\\20220121.xlsx").toURI().toURL());
-        FutureTask<Excel> futureTask = new FutureTask(task);
-        new Thread(futureTask).start();
-        Excel excel = futureTask.get();
+        ExcelParseTask task = new ExcelParseTask(new File("C:\\Users\\wps\\workspace\\doc\\project\\20220121.xlsx").toURI().toURL());
+        Future<Excel> future = POOL.submit(task);
+        Excel excel = future.get();
         System.out.println(excel.getSheets().get(0).getHeader());
-        System.out.println(excel.getSheets().get(0).getDataRows());
+        System.out.println(excel.getSheets().get(0).getDataRows().get(1));
+        POOL.shutdownNow();
     }
 }
