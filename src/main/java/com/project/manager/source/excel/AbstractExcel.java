@@ -40,7 +40,7 @@ public abstract class AbstractExcel extends AbstractSource implements Excel {
     }
 
     @Override
-    public ExcelSheet getByIndex(int index) {
+    public ExcelSheet getSheet(int index) {
         return sheets.get(index);
     }
 

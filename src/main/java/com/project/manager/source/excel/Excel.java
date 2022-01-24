@@ -25,5 +25,10 @@ public interface Excel extends Source {
      */
     List<ExcelSheet> getSheets();
 
-    ExcelSheet getByIndex(int index);
+    /**
+     *
+     * @param index
+     * @return
+     */
+    ExcelSheet getSheet(int index);
 }
