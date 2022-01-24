@@ -1,6 +1,6 @@
 package com.project.manager.pool;
 
-import com.project.manager.entity.source.excel.Excel;
+import com.project.manager.source.excel.Excel;
 import com.project.manager.parse.excel.StandardExcelParser;
 
 import java.net.URL;

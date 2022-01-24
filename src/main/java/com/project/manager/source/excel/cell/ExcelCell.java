@@ -1,4 +1,4 @@
-package com.project.manager.entity.source.excel.cell;
+package com.project.manager.source.excel.cell;
 
 /**
  * SheetRow

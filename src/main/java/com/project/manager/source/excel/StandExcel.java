@@ -1,8 +1,8 @@
-package com.project.manager.entity.source.excel;
+package com.project.manager.source.excel;
 
 import com.google.common.collect.Lists;
-import com.project.manager.entity.source.AbstractSource;
-import com.project.manager.entity.source.excel.sheet.ExcelSheet;
+import com.project.manager.source.AbstractSource;
+import com.project.manager.source.excel.sheet.ExcelSheet;
 import com.project.manager.enums.SourceTypeEnum;
 
 import java.net.URL;

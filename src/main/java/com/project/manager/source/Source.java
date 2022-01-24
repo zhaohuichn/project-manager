@@ -1,4 +1,4 @@
-package com.project.manager.entity.source;
+package com.project.manager.source;
 
 import com.project.manager.enums.SourceTypeEnum;
 

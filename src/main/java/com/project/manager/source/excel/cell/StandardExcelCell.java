@@ -1,6 +1,6 @@
-package com.project.manager.entity.source.excel.cell;
+package com.project.manager.source.excel.cell;
 
-import com.project.manager.entity.source.descriptor.Descriptor;
+import com.project.manager.source.descriptor.Descriptor;
 
 /**
  * StandardCell

@@ -1,7 +1,7 @@
-package com.project.manager.entity.source.excel.sheet;
+package com.project.manager.source.excel.sheet;
 
-import com.project.manager.entity.source.excel.row.ExcelRow;
 import com.project.manager.enums.SourceTypeEnum;
+import com.project.manager.source.excel.row.ExcelRow;
 
 import java.net.URL;
 import java.util.List;
@@ -16,6 +16,8 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
     protected Integer id;
 
     protected String name;
+
+    protected List<ExcelRow> rows;
 
     protected ExcelRow header;
 
@@ -69,5 +71,13 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
 
     public void setDataRows(List<ExcelRow> dataRows) {
         this.dataRows = dataRows;
+    }
+
+    public List<ExcelRow> getRows() {
+        return rows;
+    }
+
+    public void setRows(List<ExcelRow> rows) {
+        this.rows = rows;
     }
 }

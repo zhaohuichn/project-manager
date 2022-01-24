@@ -1,4 +1,4 @@
-package com.project.manager.entity.source.excel.row;
+package com.project.manager.source.excel.row;
 
 /**
  * DailyExcelRow

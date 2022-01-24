@@ -1,4 +1,4 @@
-package com.project.manager.entity.source.descriptor;
+package com.project.manager.source.descriptor;
 
 /**
  * ExcelCellDescriptor

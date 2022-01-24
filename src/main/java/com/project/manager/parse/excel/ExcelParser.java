@@ -1,7 +1,7 @@
 package com.project.manager.parse.excel;
 
 
-import com.project.manager.entity.source.excel.Excel;
+import com.project.manager.source.excel.Excel;
 import com.project.manager.parse.Parser;
 
 import java.net.URL;

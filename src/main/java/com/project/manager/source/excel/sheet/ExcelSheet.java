@@ -1,7 +1,7 @@
-package com.project.manager.entity.source.excel.sheet;
+package com.project.manager.source.excel.sheet;
 
-import com.project.manager.entity.source.Source;
-import com.project.manager.entity.source.excel.row.ExcelRow;
+import com.project.manager.source.Source;
+import com.project.manager.source.excel.row.ExcelRow;
 import com.project.manager.enums.SourceTypeEnum;
 
 import java.util.List;
