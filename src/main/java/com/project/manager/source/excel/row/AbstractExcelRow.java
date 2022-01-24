@@ -32,6 +32,7 @@ public abstract class AbstractExcelRow implements ExcelRow {
         this.id = id;
     }
 
+    @Override
     public List<ExcelCell> getCells() {
         return cells;
     }

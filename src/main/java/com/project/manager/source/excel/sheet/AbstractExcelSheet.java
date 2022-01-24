@@ -5,6 +5,7 @@ import com.project.manager.source.excel.row.ExcelRow;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Map;
 
 /**
  * StandardRow
@@ -22,6 +23,12 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
     protected ExcelRow header;
 
     protected List<ExcelRow> dataRows;
+
+    protected Map<Integer, String> columnIndexNameMap;
+
+    public String getColumnName(int index) {
+        return columnIndexNameMap.getOrDefault(index, "");
+    }
 
     @Override
     public SourceTypeEnum type() {
@@ -79,5 +86,13 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
 
     public void setRows(List<ExcelRow> rows) {
         this.rows = rows;
+    }
+
+    public Map<Integer, String> getColumnIndexNameMap() {
+        return columnIndexNameMap;
+    }
+
+    public void setColumnIndexNameMap(Map<Integer, String> columnIndexNameMap) {
+        this.columnIndexNameMap = columnIndexNameMap;
     }
 }

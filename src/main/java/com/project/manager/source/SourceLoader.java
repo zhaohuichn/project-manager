@@ -6,7 +6,7 @@ import java.net.URL;
 
 /**
  * 资源加载起
- *
+ * <p>
  * 任意
  *
  * @author zhaohui
@@ -15,7 +15,7 @@ public class SourceLoader {
 
 
     public static InputStream load(URL url) {
-        return null;
+        return load(url.getFile());
     }
 
     public static InputStream load(String path) {
