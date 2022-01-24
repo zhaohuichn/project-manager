@@ -35,7 +35,7 @@ public class StandardExcelSheetParser extends AbstractExcelSheetParser {
     public ExcelSheet parse(XSSFSheet raw) {
         StandardSheet sheet = new StandardSheet();
         int index = raw.getWorkbook().getSheetIndex(raw);
-        sheet.setId(index);
+        sheet.setIndex(index);
         sheet.setName(raw.getSheetName());
         setRows(sheet, raw);
         setHeader(sheet);
@@ -48,7 +48,7 @@ public class StandardExcelSheetParser extends AbstractExcelSheetParser {
         ExcelRow header = sheet.getHeader();
         List<ExcelCell> cells = header.getCells();
         Map<Integer, String> rsMap = Maps.newHashMap();
-        cells.forEach(c -> rsMap.put(c.getIndex(), c.getValue()));
+        cells.forEach(c -> rsMap.put(c.getColumnNo(), c.getValue()));
         sheet.setColumnIndexNameMap(rsMap);
     }
 

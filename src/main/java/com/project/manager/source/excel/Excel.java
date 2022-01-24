@@ -1,8 +1,8 @@
 package com.project.manager.source.excel;
 
+import com.project.manager.enums.SourceTypeEnum;
 import com.project.manager.source.Source;
 import com.project.manager.source.excel.sheet.ExcelSheet;
-import com.project.manager.enums.SourceTypeEnum;
 
 import java.util.List;
 
@@ -13,9 +13,17 @@ import java.util.List;
  */
 public interface Excel extends Source {
 
+    @Override
     default SourceTypeEnum type() {
         return SourceTypeEnum.EXCEL;
     }
 
+    /**
+     * 获取页签
+     *
+     * @return sheet
+     */
     List<ExcelSheet> getSheets();
+
+    ExcelSheet getByIndex(int index);
 }

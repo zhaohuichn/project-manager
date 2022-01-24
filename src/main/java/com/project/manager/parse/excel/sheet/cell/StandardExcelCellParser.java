@@ -22,8 +22,7 @@ public class StandardExcelCellParser implements ExcelCellParser {
         StandardExcelCell excelCell = new StandardExcelCell();
 
         int index = raw.getColumnIndex();
-        excelCell.setId(index);
-        excelCell.setIndex(index);
+        excelCell.setColumnNo(index);
         excelCell.setValue(ExcelUtil.getCellStringValue(raw));
         excelCell.setDescriptor(new StandardExcelCellDescriptor(excelCell, raw));
 

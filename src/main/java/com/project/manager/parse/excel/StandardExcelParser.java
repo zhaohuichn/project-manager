@@ -57,7 +57,7 @@ public class StandardExcelParser implements ExcelParser {
 
         List<ExcelSheet> sheets = excel.getSheets();
         for (ExcelSheet sheet : sheets) {
-            int index = sheet.getId();
+            int index = sheet.getIndex();
             XSSFSheet xssfSheet = workbook.getSheetAt(index);
             List<ExcelRow> rows = getRows(xssfSheet);
             ExcelRow header = rows.stream().filter(ExcelRow::isHeader).findFirst().orElse(null);
@@ -73,7 +73,7 @@ public class StandardExcelParser implements ExcelParser {
         int rowCount = xssfSheet.getLastRowNum();
         for (int i = 0; i < rowCount; i++) {
             StandardRow row = new StandardRow();
-            row.setId(0);
+            row.setRowNo(0);
             row.setHeader(0 == i);
             row.setCells(Lists.newArrayList());
             rows.add(row);
@@ -90,7 +90,7 @@ public class StandardExcelParser implements ExcelParser {
         for (int sheetIndex = 0; sheetIndex < sheets; sheetIndex++) {
             XSSFSheet xssfSheet = workbook.getSheetAt(sheetIndex);
             StandardSheet sheet = new StandardSheet();
-            sheet.setId(sheetIndex);
+            sheet.setIndex(sheetIndex);
             sheet.setName(xssfSheet.getSheetName());
             excel.getSheets().add(sheet);
         }

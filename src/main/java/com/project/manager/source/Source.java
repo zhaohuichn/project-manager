@@ -1,7 +1,6 @@
 package com.project.manager.source;
 
 import com.project.manager.enums.SourceTypeEnum;
-import com.project.manager.ext.Customizable;
 
 import java.net.URL;
 
@@ -10,7 +9,7 @@ import java.net.URL;
  *
  * @author ZHAOHUI
  */
-public interface Source extends Customizable {
+public interface Source {
 
     /**
      * 资源类型
@@ -20,11 +19,11 @@ public interface Source extends Customizable {
     SourceTypeEnum type();
 
     /**
-     * 资源路径
+     * 资源名称
      *
-     * @return abs path
+     * @return name
      */
-    String abstractPath();
+    String name();
 
     /**
      * 资源url

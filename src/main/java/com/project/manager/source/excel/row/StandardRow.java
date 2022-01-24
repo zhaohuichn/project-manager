@@ -7,6 +7,4 @@ package com.project.manager.source.excel.row;
  */
 public class StandardRow extends AbstractExcelRow {
 
-
-
 }

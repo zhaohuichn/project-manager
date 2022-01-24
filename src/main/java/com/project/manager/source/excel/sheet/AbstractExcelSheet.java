@@ -1,5 +1,6 @@
 package com.project.manager.source.excel.sheet;
 
+import com.project.manager.source.excel.Excel;
 import com.project.manager.source.excel.row.ExcelRow;
 
 import java.util.List;
@@ -12,7 +13,9 @@ import java.util.Map;
  */
 public abstract class AbstractExcelSheet implements ExcelSheet {
 
-    protected Integer id;
+    protected Excel excel;
+
+    protected Integer index;
 
     protected String name;
 
@@ -24,17 +27,27 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
 
     protected Map<Integer, String> columnIndexNameMap;
 
+    @Override
     public String getColumnName(int index) {
         return columnIndexNameMap.getOrDefault(index, "");
     }
 
     @Override
-    public Integer getId() {
-        return this.id;
+    public Excel getExcel() {
+        return excel;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setExcel(Excel excel) {
+        this.excel = excel;
+    }
+
+    @Override
+    public Integer getIndex() {
+        return index;
+    }
+
+    public void setIndex(Integer index) {
+        this.index = index;
     }
 
     public String getName() {

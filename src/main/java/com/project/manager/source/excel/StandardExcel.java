@@ -1,10 +1,5 @@
 package com.project.manager.source.excel;
 
-import com.project.manager.source.excel.sheet.ExcelSheet;
-
-import java.net.URL;
-import java.util.List;
-
 /**
  * 标准Excel文件
  * <p>
@@ -13,23 +8,5 @@ import java.util.List;
  * @author ZHAOHUI
  */
 public class StandardExcel extends AbstractExcel {
-    @Override
-    public void extend() {
 
-    }
-
-    @Override
-    public String abstractPath() {
-        return null;
-    }
-
-    @Override
-    public URL url() {
-        return null;
-    }
-
-    @Override
-    public List<ExcelSheet> getSheets() {
-        return null;
-    }
 }
