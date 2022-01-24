@@ -15,6 +15,7 @@
     <description>project-manager</description>
     <properties>
         <java.version>11</java.version>
+        <easyexcel.version>3.0.5</easyexcel.version>
     </properties>
     <dependencies>
         <dependency>
@@ -38,6 +39,15 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- alibaba -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>${easyexcel.version}</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
