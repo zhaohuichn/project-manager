@@ -28,7 +28,7 @@ public class StandardExcelRowParser implements ExcelRowParser {
         StandardRow row = new StandardRow();
 
         int rowNum = raw.getRowNum();
-        row.setId(rowNum);
+        row.setRowNo(rowNum);
         row.setHeader(0 == rowNum);
         List<ExcelCell> cells = Lists.newArrayList();
         Iterator<Cell> cellIterator = raw.cellIterator();
