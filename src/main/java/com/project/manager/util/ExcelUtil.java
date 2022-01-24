@@ -1,8 +1,8 @@
 package com.project.manager.util;
 
 import org.apache.commons.compress.utils.Lists;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
-import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -85,7 +85,7 @@ public class ExcelUtil {
         }
     }
 
-    public static String getStringCellValue(XSSFCell cell) {
+    public static String getCellStringValue(Cell cell) {
         if (null == cell) {
             return "";
         }

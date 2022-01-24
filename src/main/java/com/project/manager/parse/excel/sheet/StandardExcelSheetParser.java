@@ -2,7 +2,7 @@ package com.project.manager.parse.excel.sheet;
 
 import com.google.common.collect.Lists;
 import com.project.manager.parse.excel.sheet.row.ExcelRowParser;
-import com.project.manager.parse.excel.sheet.row.StandardRowParser;
+import com.project.manager.parse.excel.sheet.row.StandardExcelRowParser;
 import com.project.manager.source.excel.row.ExcelRow;
 import com.project.manager.source.excel.sheet.ExcelSheet;
 import com.project.manager.source.excel.sheet.StandardSheet;
@@ -22,7 +22,7 @@ public class StandardExcelSheetParser extends AbstractExcelSheetParser {
     private ExcelRowParser rowParser;
 
     public StandardExcelSheetParser() {
-        rowParser = new StandardRowParser();
+        rowParser = new StandardExcelRowParser();
     }
 
 

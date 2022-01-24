@@ -19,6 +19,7 @@ public abstract class AbstractExcelRow implements ExcelRow {
 
     protected List<ExcelCell> cells;
 
+    @Override
     public boolean isHeader() {
         return 0 == id;
     }

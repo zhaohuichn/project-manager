@@ -45,7 +45,7 @@ public class ExcelSheetDataBuilder implements Builder<ExcelSheetData> {
         XSSFRow sheetHeader = sheet.getRow(0);
         Map<Integer, String> cellNameMap = Maps.newHashMap();
         for (int i = 0; i < sheetHeader.getLastCellNum(); i++) {
-            cellNameMap.put(i, ExcelUtil.getStringCellValue(sheetHeader.getCell(i)));
+            cellNameMap.put(i, ExcelUtil.getCellStringValue(sheetHeader.getCell(i)));
         }
         return cellNameMap;
     }
@@ -65,7 +65,7 @@ public class ExcelSheetDataBuilder implements Builder<ExcelSheetData> {
             XSSFRow row = sheet.getRow(rowIndex);
             Map<Integer, String> cellValue = Maps.newHashMap();
             for (int cellIndex = 0; cellIndex < row.getLastCellNum(); cellIndex++) {
-                cellValue.put(cellIndex, ExcelUtil.getStringCellValue(row.getCell(cellIndex)));
+                cellValue.put(cellIndex, ExcelUtil.getCellStringValue(row.getCell(cellIndex)));
                 rowData.put(rowIndex, cellValue);
             }
         }

@@ -7,4 +7,11 @@ package com.project.manager.source.excel.cell;
  */
 public interface ExcelCell {
 
+    int getId();
+
+    int getIndex();
+
+    String getValue();
+
+
 }
