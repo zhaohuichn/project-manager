@@ -26,9 +26,10 @@ public interface Excel extends Source {
     List<ExcelSheet> getSheets();
 
     /**
+     * 获取页签
      *
-     * @param index
-     * @return
+     * @param index 索引
+     * @return sheet
      */
     ExcelSheet getSheet(int index);
 }
