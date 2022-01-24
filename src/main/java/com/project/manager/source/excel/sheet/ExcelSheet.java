@@ -1,8 +1,7 @@
 package com.project.manager.source.excel.sheet;
 
-import com.project.manager.source.Source;
-import com.project.manager.source.excel.row.ExcelRow;
 import com.project.manager.enums.SourceTypeEnum;
+import com.project.manager.source.excel.row.ExcelRow;
 
 import java.util.List;
 
@@ -11,9 +10,11 @@ import java.util.List;
  *
  * @author ZHAOHUI
  */
-public interface ExcelSheet extends Source {
+public interface ExcelSheet {
 
-    int getId();
+    Integer getId();
+
+    Integer getIndex();
 
     ExcelRow getHeader();
 

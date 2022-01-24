@@ -5,7 +5,7 @@ import com.project.manager.parse.excel.sheet.ExcelSheetParser;
 import com.project.manager.parse.excel.sheet.StandardExcelSheetParser;
 import com.project.manager.source.SourceLoader;
 import com.project.manager.source.excel.Excel;
-import com.project.manager.source.excel.StandExcel;
+import com.project.manager.source.excel.StandardExcel;
 import com.project.manager.source.excel.row.ExcelRow;
 import com.project.manager.source.excel.row.StandardRow;
 import com.project.manager.source.excel.sheet.ExcelSheet;
@@ -35,7 +35,7 @@ public class StandardExcelParser implements ExcelParser {
 
     @Override
     public Excel parse(URL url) {
-        StandExcel excel = new StandExcel();
+        StandardExcel excel = new StandardExcel();
 
         XSSFWorkbook workbook = ExcelUtil.readWorkbook(SourceLoader.load(url));
         if (null == workbook) {

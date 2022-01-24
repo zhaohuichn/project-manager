@@ -1,15 +1,16 @@
 package com.project.manager.source;
 
 import com.project.manager.enums.SourceTypeEnum;
+import com.project.manager.ext.Customizable;
 
 import java.net.URL;
 
 /**
- * Source
+ * 资源
  *
  * @author ZHAOHUI
  */
-public interface Source {
+public interface Source extends Customizable {
 
     /**
      * 资源类型

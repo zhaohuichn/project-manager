@@ -1,9 +1,7 @@
 package com.project.manager.source.excel.sheet;
 
-import com.project.manager.enums.SourceTypeEnum;
 import com.project.manager.source.excel.row.ExcelRow;
 
-import java.net.URL;
 import java.util.List;
 import java.util.Map;
 
@@ -31,23 +29,8 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
     }
 
     @Override
-    public SourceTypeEnum type() {
-        return SourceTypeEnum.SHEET;
-    }
-
-    @Override
-    public String abstractPath() {
-        return null;
-    }
-
-    @Override
-    public URL url() {
-        return null;
-    }
-
-    @Override
-    public int getId() {
-        return id;
+    public Integer getId() {
+        return this.id;
     }
 
     public void setId(Integer id) {
@@ -60,6 +43,14 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<ExcelRow> getRows() {
+        return rows;
+    }
+
+    public void setRows(List<ExcelRow> rows) {
+        this.rows = rows;
     }
 
     @Override
@@ -78,14 +69,6 @@ public abstract class AbstractExcelSheet implements ExcelSheet {
 
     public void setDataRows(List<ExcelRow> dataRows) {
         this.dataRows = dataRows;
-    }
-
-    public List<ExcelRow> getRows() {
-        return rows;
-    }
-
-    public void setRows(List<ExcelRow> rows) {
-        this.rows = rows;
     }
 
     public Map<Integer, String> getColumnIndexNameMap() {
