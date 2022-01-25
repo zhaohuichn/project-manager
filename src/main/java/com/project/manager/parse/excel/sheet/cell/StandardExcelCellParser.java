@@ -11,7 +11,7 @@ import org.apache.poi.ss.usermodel.Cell;
  *
  * @author ZHAOHUI
  */
-public class StandardExcelCellParser implements ExcelCellParser {
+public class StandardExcelCellParser implements ExcelCellParser<Cell, ExcelCell> {
 
     public StandardExcelCellParser() {
 

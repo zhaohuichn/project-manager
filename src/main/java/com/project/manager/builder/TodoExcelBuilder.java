@@ -60,19 +60,20 @@ public class TodoExcelBuilder implements Builder<Excel> {
     }
 
     private void setSheetRows(StandardSheet sheet) {
+        sheet.setHeader(buildSheetHeader(sheet));
+        sheet.setDataRows(buildSheetDataRows(sheet));
+        List<ExcelRow> rows = Lists.newArrayList();
 
+        rows.addAll(sheet.getDataRows());
+        rows.add(sheet.getHeader());
+        sheet.setRows(rows);
     }
 
-    private List<ExcelRow> buildSheetRows(StandardSheet sheet) {
-        ExcelSheet srcExcelSheet = srcExcel.getSheet(0);
-
+    private List<ExcelRow> buildSheetDataRows(StandardSheet sheet) {
         List<ExcelRow> excelRows = Lists.newArrayList();
 
-        // add header
-        ExcelRow header = buildSheetHeader(sheet);
-        excelRows.add(header);
-
         // add data row
+        ExcelSheet srcExcelSheet = srcExcel.getSheet(0);
         for (ExcelRow srcRow : srcExcelSheet.getDataRows()) {
             StandardRow todoRow = new StandardRow();
 
@@ -80,30 +81,35 @@ public class TodoExcelBuilder implements Builder<Excel> {
             todoRow.setRowNo(rowNum);
             todoRow.setSheet(sheet);
             todoRow.setHeader(false);
-            setRowCells(todoRow);
+            buildCells(todoRow);
 
             excelRows.add(todoRow);
         }
         return excelRows;
     }
 
+    /**
+     * 自定义表头
+     *
+     * @param sheet 页签
+     * @return row
+     */
     private ExcelRow buildSheetHeader(ExcelSheet sheet) {
         StandardRow row = new StandardRow();
 
         row.setRowNo(0);
         row.setSheet(sheet);
         row.setHeader(true);
-        setRowCells(row);
+        buildCells(row);
 
-        return null;
+        return row;
     }
 
-    private void setRowCells(ExcelRow toRow) {
-
-
-    }
-
-
+    /**
+     * 构建行列
+     * @param toRow
+     * @return
+     */
     private List<ExcelCell> buildCells(ExcelRow toRow) {
 
         protected ExcelRow excelRow;
