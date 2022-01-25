@@ -2,7 +2,7 @@ package com.project.manager.builder;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
-import com.project.manager.source.descriptor.Descriptor;
+import com.project.manager.source.descriptor.StandardExcelCellDescriptor;
 import com.project.manager.source.excel.Excel;
 import com.project.manager.source.excel.StandardExcel;
 import com.project.manager.source.excel.cell.ExcelCell;
@@ -107,28 +107,22 @@ public class TodoExcelBuilder implements Builder<Excel> {
 
     /**
      * 构建行列
+     *
      * @param toRow
      * @return
      */
     private List<ExcelCell> buildCells(ExcelRow toRow) {
-
-        protected ExcelRow excelRow;
-
-        protected int columnNo;
-
-        private String value;
-
-        private Descriptor descriptor;
-
-        StandardExcelCell cell = new StandardExcelCell();
-        cell.setExcelRow(toRow);
-
-
+        List<ExcelCell> cells = Lists.newArrayList();
         for (Map.Entry<Integer, String> entry : COLUMN_INDEX_NAME_MAP.entrySet()) {
-            Integer cellNo = entry.getKey();
-            ExcelCellValueBuilder
-        }
+            StandardExcelCell cell = new StandardExcelCell();
+            cell.setColumnNo(entry.getKey());
+            cell.setExcelRow(toRow);
+            cell.setValue(entry.getValue());
+            cell.setDescriptor(new StandardExcelCellDescriptor());
 
+            cells.add(cell);
+        }
+        return cells;
     }
 
     private Excel obtainExcel() {

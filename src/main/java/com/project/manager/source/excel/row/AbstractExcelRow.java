@@ -61,4 +61,9 @@ public abstract class AbstractExcelRow implements ExcelRow {
     public Excel getExcel() {
         return sheet.getExcel();
     }
+
+    @Override
+    public ExcelCell cellAt(int pos) {
+        return cells.get(pos);
+    }
 }

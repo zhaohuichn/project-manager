@@ -48,4 +48,12 @@ public interface ExcelRow {
      */
     List<ExcelCell> getCells();
 
+    /**
+     * 根据索引查询单元格
+     *
+     * @param pos 索引
+     * @return cell
+     */
+    ExcelCell cellAt(int pos);
+
 }
